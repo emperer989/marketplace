@@ -33,6 +33,12 @@
     required: true
     default: loopedge-s3cr3t!
     type: string
+  - variable: MYSQL_TIMEZONE
+    description: 'timezone'
+    label: 'time_zone:'
+    required: true
+    default: Asia/Seoul
+    type: string
   - variable: RESTART
     description: 'Application restart option: no, always, on-failure'
     label: 'Restart:'
