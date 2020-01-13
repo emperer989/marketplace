@@ -4,9 +4,18 @@ services:
     image: mariadb:10.2.10
     ports:
       - ${MariaDB_PORT}:3306/tcp
-    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${MySQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    restart: "${RESTART}"
     volumes:
-      - /Users/aaaa/con_volumes/mariadb/data:/var/lib/mysql
-      - /Users/aaaa/con_volumes/mariadb/conf.d:/etc/mysql/conf.d
+      - mariadb-vol:/var/lib/mysql
+      - mariaconf-vol:/etc/mysql/conf.d
+
+volumes:
+  mariadb-vol:
+    driver: local
+  mariaconf-vol:
+    driver: local

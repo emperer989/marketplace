@@ -7,23 +7,29 @@
     description: 'MariaDB exposed port'
     label: 'Port:'
     required: true
-    default: 8088
+    default: 3066
     type: int
-  - variable: Maria_DATABASE
+  - variable: MySQL_ROOT_PASSWORD
+    description: 'MySQL root password'
+    label: 'MySQL password:'
+    required: true
+    default: loopedge-s3cr3t!
+    type: string
+  - variable: MYSQL_DATABASE
     description: 'Maria database'
     label: 'Database:'
     required: true
     default: sample
     type: string
-  - variable: MariaDB_USER
+  - variable: MYSQL_USER
     description: 'MariaDB user'
     label: 'User:'
     required: true
     default: user
     type: string
-  - variable: MySQL_ROOT_PASSWORD
-    description: 'MySQL root password'
-    label: 'MySQL password:'
+  - variable: MYSQL_PASSWORD
+    description: 'MySQL password'
+    label: 'Password:'
     required: true
     default: loopedge-s3cr3t!
     type: string
