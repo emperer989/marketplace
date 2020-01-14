@@ -3,7 +3,7 @@ services:
   mariadb:
     image: mariadb:10.2.10
     ports:
-      - ${MariaDB_PORT}:9090/tcp
+      - ${MariaDB_PORT}:3306/tcp
     environment:
       - MYSQL_ROOT_PASSWORD=${MySQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
