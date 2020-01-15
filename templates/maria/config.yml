@@ -1,0 +1,5 @@
+name: mariaDB
+description: DataBase MariaDB2
+category: Programming
+version: 1
+internal port: 9090
