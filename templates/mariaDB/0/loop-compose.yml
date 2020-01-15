@@ -18,13 +18,13 @@
     - variable: MYSQL_DATABASE
       description: 'Maria database'
       label: 'Database:'
-      required: false
+      required: true
       default: sample
       type: string
     - variable: MYSQL_USER
       description: 'MariaDB user'
       label: 'User:'
-      required: false
+      required: true
       default: user
       type: string
     - variable: MYSQL_PASSWORD
@@ -36,13 +36,13 @@
     - variable: MYSQL_TIMEZONE
       description: 'timezone'
       label: 'time_zone:'
-      required: false
+      required: true
       default: Asia/Seoul
       type: string
     - variable: RESTART
       description: 'Application restart option: no, always, on-failure'
       label: 'Restart:'
-      required: false
+      required: true
       default: "always"
       type: string
       
