@@ -9,39 +9,39 @@
     required: true
     default: 3066
     type: int
-  - variable: MySQL_ROOT_PASSWORD
+  - variable: MYSQL_ROOT_PASSWORD
     description: 'MySQL root password'
-    label: 'MySQL password:'
+    label: 'MySQL root password:'
     required: true
     default: loopedge-s3cr3t!
     type: string
   - variable: MYSQL_DATABASE
     description: 'Maria database'
     label: 'Database:'
-    required: true
+    required: false
     default: sample
     type: string
   - variable: MYSQL_USER
     description: 'MariaDB user'
     label: 'User:'
-    required: true
+    required: false
     default: user
     type: string
   - variable: MYSQL_PASSWORD
     description: 'MySQL password'
     label: 'Password:'
-    required: true
+    required: flase
     default: loopedge-s3cr3t!
     type: string
   - variable: MYSQL_TIMEZONE
     description: 'timezone'
     label: 'time_zone:'
-    required: true
+    required: false
     default: Asia/Seoul
     type: string
   - variable: RESTART
     description: 'Application restart option: no, always, on-failure'
     label: 'Restart:'
-    required: true
+    required: false
     default: "always"
     type: string
