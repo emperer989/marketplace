@@ -1,5 +1,5 @@
 ﻿.catalog:
-  name: Grafana
+  name: Grafana-Enterprise
   version: latest
   uuid: Grafana-0
   questions:
