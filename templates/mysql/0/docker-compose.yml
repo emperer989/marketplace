@@ -19,7 +19,9 @@ services:
         ipv4_address: 10.30.50.4
 networks:
   static-mysql:
+    driver: bridge
     ipam:
+      driver: default
       config:
         - subnet: 10.30.50.0/24
           gateway: 10.30.50.1
