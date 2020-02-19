@@ -17,6 +17,7 @@ services:
     networks:
       static-mysql:
         ipv4_address: 10.30.50.4
+
 networks:
   static-mysql:
     driver: bridge
