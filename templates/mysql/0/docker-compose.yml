@@ -16,7 +16,7 @@ services:
       - mysqldb-vol:/var/lib/mysql
     networks:
       static-mysql:
-        - ipv4_address: 10.30.50.4
+        ipv4_address: 10.30.50.4
 networks:
   static-mysql:
     ipam:
