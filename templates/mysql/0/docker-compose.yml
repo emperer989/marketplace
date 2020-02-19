@@ -1,4 +1,4 @@
-version: "2"
+version: "2.4"
 
 services:
   mysql:
@@ -16,7 +16,7 @@ services:
       - mysqldb-vol:/var/lib/mysql
     networks:
       static-mysql:
-        ipv4_address: 10.30.50.4
+        ipv4_address: 10.30.51.4
 
 networks:
   static-mysql:
@@ -24,8 +24,8 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 10.30.50.0/24
-          gateway: 10.30.50.1
+        - subnet: 10.30.51.0/24
+          gateway: 10.30.51.1
 
 volumes:
   mysqldb-vol:
