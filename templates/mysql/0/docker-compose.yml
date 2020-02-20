@@ -15,11 +15,11 @@ services:
     volumes:
       - mysqldb-vol:/var/lib/mysql
     networks:
-      static-mysql:
+      mynet:
         ipv4_address: 10.30.51.1
 
 networks:
-  static-mysql:
+  mynet:
     ipam:
       driver: default
       config:
