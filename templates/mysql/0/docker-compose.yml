@@ -16,14 +16,16 @@ services:
       - mysqldb-vol:/var/lib/mysql
     networks:
       mynet:
-        ipv4_address: 10.30.51.1
+        ipv4_address: 10.30.51.2
 
 networks:
   mynet:
+    driver: bridge
     ipam:
       driver: default
       config:
         - subnet: 10.30.51.0/24
+          gateway: 10.30.51.1
 
 volumes:
   mysqldb-vol:
