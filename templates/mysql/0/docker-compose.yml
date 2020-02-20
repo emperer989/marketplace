@@ -15,17 +15,8 @@ services:
     volumes:
       - mysqldb-vol:/var/lib/mysql
     networks:
-      static-mysql:
+      bridge:
         ipv4_address: 10.30.50.2
-
-networks:
-  static-mysql:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 10.30.50.0/24
-          gateway: 10.30.50.1
 
 volumes:
   mysqldb-vol:
