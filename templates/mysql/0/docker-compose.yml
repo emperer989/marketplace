@@ -14,8 +14,20 @@ services:
     restart: "${RESTART}"
     volumes:
       - mysqldb-vol:/var/lib/mysql
-    network_mode: bridge
-    
+    networks:
+      bridge2:
+        ipv4_address: 10.30.51.2
+
+networks:
+  bridge2:
+    driver: bridge2
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.30.51.0/24
+          gateway: 10.30.51.1
+
+
 volumes:
   mysqldb-vol:
     driver: local
