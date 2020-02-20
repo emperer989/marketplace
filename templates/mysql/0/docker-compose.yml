@@ -20,7 +20,7 @@ services:
 
 networks:
   bridge2:
-    driver: bridge2
+    driver: bridge
     ipam:
       driver: default
       config:
